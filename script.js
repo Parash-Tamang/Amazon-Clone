@@ -54,7 +54,7 @@ function primeSlide() {
     let text = document.getElementById('seriesName');
     
     num += 1;
-    num = (num % primeIMG.length+1);
+    num = (num>primeImage.length)?0:num;
     console.log(num);
     slide.style.backgroundImage = `url(${primeIMG[num-1][0]})`;
     text.textContent = primeIMG[num-1][1]+' - Season 1'; 
