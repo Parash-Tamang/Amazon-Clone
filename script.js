@@ -53,7 +53,7 @@ function primeSlide() {
     let slide = document.getElementById('prime-video-img');
     let text = document.getElementById('seriesName');
     
-    num = (num%primeImg);
+    num = (num%primeImg.length);
     slide.style.backgroundImage = `url(${primeIMG[num-1][0]})`;
     text.textContent = primeIMG[num-1][1]+' - Season 1'; 
     num += 1;
