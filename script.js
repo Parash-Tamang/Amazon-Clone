@@ -53,12 +53,10 @@ function primeSlide() {
     let slide = document.getElementById('prime-video-img');
     let text = document.getElementById('seriesName');
     
-    num += 1;
-    num = (num>primeImage.length)?0:num;
-    console.log(num);
+    num = (num%primeImg);
     slide.style.backgroundImage = `url(${primeIMG[num-1][0]})`;
     text.textContent = primeIMG[num-1][1]+' - Season 1'; 
-    console.log(primeIMG[num-1][0])
+    num += 1;
 }
 setInterval(primeSlide, 3000);
 setInterval(changeImage,5000)
